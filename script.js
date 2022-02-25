@@ -1,6 +1,7 @@
 const email = document.querySelector('#email');
 const senha = document.querySelector('#password');
 const buttonUser = document.querySelector('#button-user');
+const submit = document.querySelector('submit-btn');
 
 function validateUser() {
   if (email.value === 'tryber@teste.com' && senha.value === '123456') {
