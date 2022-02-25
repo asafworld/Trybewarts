@@ -1,7 +1,8 @@
 const email = document.querySelector('#email');
 const senha = document.querySelector('#password');
 const buttonUser = document.querySelector('#button-user');
-const submit = document.querySelector('submit-btn');
+const imageConsent = document.querySelector('#agreement');
+const submit = document.querySelector('#submit-btn');
 
 function validateUser() {
   if (email.value === 'tryber@teste.com' && senha.value === '123456') {
@@ -13,6 +14,12 @@ function validateUser() {
 
 buttonUser.addEventListener('click', validateUser);
 
-/* window.onload = function load() {
-  //
-}; */
+function conditionSubmit() {
+  if (imageConsent.checked) {
+    submit.disabled = false;
+  }
+}
+
+window.onload = function load() {
+  imageConsent.addEventListener('click', conditionSubmit);
+};
